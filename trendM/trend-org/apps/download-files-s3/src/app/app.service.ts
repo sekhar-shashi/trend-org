@@ -42,7 +42,7 @@ export class AppService {
   /**
  * Encrypt
  */
- async encryptString(){
+ async encryptFile(){
   const secret = fs.readFileSync(`${path.join(__dirname , 'array.txt')}`)
   const opt = {
     Plaintext: secret,
@@ -98,7 +98,7 @@ export class AppService {
           }
         }));
         this.writeTofile(arr);
-        await this.encryptString();
+        await this.encryptFile();
     });
   }
 }

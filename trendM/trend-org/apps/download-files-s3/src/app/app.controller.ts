@@ -9,8 +9,6 @@ export class AppController {
   callback= (arr) => this.appService.writeTofile(arr);
   @Get()
   async getData() {
-    const x = await this.appService.downloadS3();
-    
-    await this.appService.encryptString();
+     await this.appService.downloadS3();
   }
 }
