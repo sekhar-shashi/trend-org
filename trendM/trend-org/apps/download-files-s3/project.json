@@ -1,0 +1,52 @@
+{
+  "root": "apps/download-files-s3",
+  "sourceRoot": "apps/download-files-s3/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/download-files-s3",
+        "main": "apps/download-files-s3/src/main.ts",
+        "tsConfig": "apps/download-files-s3/tsconfig.app.json",
+        "assets": ["apps/download-files-s3/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/download-files-s3/src/environments/environment.ts",
+              "with": "apps/download-files-s3/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "download-files-s3:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/download-files-s3/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/download-files-s3"],
+      "options": {
+        "jestConfig": "apps/download-files-s3/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

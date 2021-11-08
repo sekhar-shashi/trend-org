@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "download-files-s3": "apps/download-files-s3"
+}
+}
