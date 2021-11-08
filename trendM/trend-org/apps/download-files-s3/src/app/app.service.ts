@@ -10,10 +10,9 @@ import { KMS } from 'aws-sdk';
 AWS.config.update({ region:'ap-southeast-2' });
 // this is temp sts token
 const param = {
-  'accessKeyId':'ASIAUFYLYDQLQ7REWJNB',
-  'sessionToken':'FwoGZXIvYXdzECYaDCY5LPjp6TO50xQhpiL6AfJWUI0ioqZJheN9xTPyb7of1G6FOTJscnWu8XGXBfDv9moCASjB3ALHNbStJ2Be4+5M1hCMC8vewUH2mXlt31FZ5h2t4414ruqemnzKkUKpVB2dVya2zUBJw5xkBeo62GliqhLyrfH3hhSw5Sh3GVrVNO8e9y921w12+FOzDZSVLYKOvzISPl9xFmLg5fI/iB/epUqsnVzBhuEIBpAusNdKwSdIB9l3Ckcdl/kDOrBVAdTgJVK28H2/NGW2jYfPr92IB3cV7gWgkSb6DeHZhrRDCJBmmYJJ5ckLhbH4f/Q2FfiYlg4mt57nPR8NFXCeXh6hcKbnfQ5zEFoo/7+kjAYyK0GzXq9caUn3jZIPFO6IAogOB1ez4dqHGd9F64rDwZbggpPzrjjd5/Yzlwg=',
-  'secretAccessKey':'PrPmvR8MYkm5eS5IT9Jhw+y3RjBi7PQp6k3FFnmq',
-  //'AWS_SECURITY_TOKEN':'FwoGZXIvYXdzEAgaDKyf94xML2P29lcE1iL6ARBxjl+PD8Tdo3N2A3yaswjcTbt7/d7so803J7smFbwCdKFsyUh+ip9I5OcNLxI2XVkQpMRNGuvHw5bgovQwT3awf+8u3U9aAEmGqfTDLHfHuG2H2DIFmCcCAAHSQFTx2nlE1i6ZuG03mBjOlScyJc7mv5wGJA8KwaoB00EO5nZv+JJ/xhBLD9Kg42Nhe2VS38YrlU0zSuc6V1VbvAm7g27R1SjFVSf3Doy3e27DWhxng5xRQcnIE6iXMECGu0MKt0y29woUgqPxoijNfanLuQZSgR4iLnqakF6RQEQBhuqD+9pbyO36NkyydvmCqNnBpcaqGMi0+rHxjoQom/SdjAYyK2DbSJXUTGSp2/QCttigtiaCjMSed1BbYd1iMGT/pplnGVuO+fT2IELrIog='
+  //'accessKeyId':'ASIAUFYLYDQLQ7REWJNB',
+  //'sessionToken':'FwoGZXIvYXdzECYaDCY5LPjp6TO50xQhpiL6AfJWUI0ioqZJheN9xTPyb7of1G6FOTJscnWu8XGXBfDv9moCASjB3ALHNbStJ2Be4+5M1hCMC8vewUH2mXlt31FZ5h2t4414ruqemnzKkUKpVB2dVya2zUBJw5xkBeo62GliqhLyrfH3hhSw5Sh3GVrVNO8e9y921w12+FOzDZSVLYKOvzISPl9xFmLg5fI/iB/epUqsnVzBhuEIBpAusNdKwSdIB9l3Ckcdl/kDOrBVAdTgJVK28H2/NGW2jYfPr92IB3cV7gWgkSb6DeHZhrRDCJBmmYJJ5ckLhbH4f/Q2FfiYlg4mt57nPR8NFXCeXh6hcKbnfQ5zEFoo/7+kjAYyK0GzXq9caUn3jZIPFO6IAogOB1ez4dqHGd9F64rDwZbggpPzrjjd5/Yzlwg=',
+  //'secretAccessKey':'PrPmvR8MYkm5eS5IT9Jhw+y3RjBi7PQp6k3FFnmq',
 }
 // declaration section 
 const kms = new KMS(param);
