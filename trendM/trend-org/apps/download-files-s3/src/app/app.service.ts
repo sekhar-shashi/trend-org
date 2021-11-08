@@ -47,7 +47,8 @@ export class AppService {
   const secret = fs.readFileSync(`${path.join(__dirname , 'array.txt')}`)
   const opt = {
     Plaintext: secret,
-    KeyId: `arn:aws:kms:ap-southeast-2:287250586647:key/c6e5db0a-3fee-4408-ba96-07db5efd4a1d`,
+    //KeyId: `arn:aws:kms:ap-southeast-2:287250586647:key/c6e5db0a-3fee-4408-ba96-07db5efd4a1d`,
+    KeyId: 'some dummy arn'
   };
   const { CiphertextBlob } = await kms.encrypt(opt).promise();
   console.log('success after kms encryption')
