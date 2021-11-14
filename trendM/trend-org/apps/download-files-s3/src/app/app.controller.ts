@@ -4,11 +4,14 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-  
-  callback= (arr) => this.appService.writeTofile(arr);
+  constructor(private readonly appService: AppService) {}  
   @Get()
   async getData() {
-     await this.appService.downloadS3();
+     const arr = await this.appService.downloadS3();
+     console.log('arrr', arr);
+     this.appService.writeTofile(arr);
+     console.log('write done');
+     await this.appService.encryptFile();
+     console.log('encrypt done done');
   }
 }
